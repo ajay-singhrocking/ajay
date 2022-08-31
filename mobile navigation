@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Tab Navigation</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+
+      body{
+        background-color: rgb(198, 93, 198);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .navbar{
+        position: relative;
+        border: 2px solid rgb(231, 231, 231);
+        overflow: hidden;
+        border-radius: 10px;
+        height: 365px;
+        width: 225px;
+      }
+
+      .navbar #photo{
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        height: 90%;
+        width: 100%;
+      }
+
+      nav{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-top: -5px;
+      }
+
+      nav ul{
+        background-color: white;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 52px;
+      }
+
+      nav li{
+        color: #777;
+        cursor: pointer;
+        padding: 4px;
+        text-align: center;
+        flex: 1;
+        margin-top: 7px;
+      }
+
+      nav ul li p{
+        font-size: 10px;
+        margin: 4px 0;
+      }
+
+      nav ul li:hover{
+        color: rgb(232, 124, 124);
+      }
+    
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <img src="https://images.unsplash.com/photo-1578958792897-58db5098a820?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="photo" id="photo">
+        <nav>
+            <ul>
+                <li>
+                  <i class="fas fa-home"></i>
+                 <p>Home</p>
+                </li>
+                <li>
+                 <i class="fas fa-box"></i>
+                 <p>Work</p>
+                </li>
+                <li>
+                 <i class="fas fa-book-open"></i>
+                 <p>blog</p>
+                </li>
+                <li>
+                 <i class="fas fa-users"></i>
+                 <p>About Us</p>
+                </li>
+            </ul>
+        </nav>
+    </section>
+      <script src="https://kit.fontawesome.com/57abe45d44.js" crossorigin="anonymous"></script>
+</body>
+</html>
