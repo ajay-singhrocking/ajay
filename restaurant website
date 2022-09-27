@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myfoodfactory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* css reset */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* navigation bar */
+    #navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    }
+
+    
+    #navbar input{
+        /* margin-left: 350px; */
+        width: 200px;
+        height: 25px;
+        border-radius: 8px;
+        border: 2px solid black;
+        padding-left: 4px;
+        
+    }
+    
+    #navbar button{
+        /* margin-left: 25px; */
+        width: 60px;
+        height: 30px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    #navbar button:hover{
+        background-color: rgb(234, 52, 52);
+    }
+    
+    /* logo and images */
+    #logo{
+    margin: 11px 13px;
+    }
+    
+    #logo img{
+    margin: 5px 13px;
+    height: 57px;
+    border-radius: 13px;
+    }
+    
+    /* list and styling */
+    #navbar ul{
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+    }
+    
+    #navbar::before{
+        content: "";
+        background-color: rgb(174 153 147);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    #navbar ul li{
+        list-style: none;
+        font-size: 1.3rem;
+    }
+    
+    #navbar ul li a{
+        color: white;
+        display: block;
+        padding: 18px 13px;
+        border-radius: 15px;
+        text-decoration: none;
+    }
+    
+    #navbar ul li a:hover{
+        color: brown;
+        text-decoration: underline;
+    }
+    
+    /* Home section */
+    
+    #services{
+        display: flex;
+        margin: 20px;
+        background: url('https://media.istockphoto.com/photos/assorted-indian-recipes-food-various-picture-id922783734?k=20&m=922783734&s=612x612&w=0&h=_oV4oOrb8kC4RVgAI6RrGfQ8lIKsnP89lwwjHfhxUzQ=');
+    }
+    
+    #services .box{
+        border: 2px solid brown;
+        padding: 38px;
+        margin: 4px 6px;
+        border-radius: 25px;
+        background-color: rgb(239 228 228);
+    }
+    
+    #services .box img{
+        height: 100px;
+        display: block;
+        margin: auto;
+        width: 140px;
+    }
+    
+    #services .box p{
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    /* contact portion */
+    
+    #contact{
+       position: relative;
+    }
+    
+    #contact::before{
+       content: "";
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+       opacity: 0.6;
+       background: url('https://media.istockphoto.com/photos/-picture-id1311934969?b=1&k=20&m=1311934969&s=170667a&w=0&h=UQ3F8CE5zam5mT5swIliZ9nO7dhX4ZzsALMufFdv6Ys=') no-repeat center center/cover;
+    }
+    
+    /* clients portion */
+    
+    #our-client{
+        height: 344px;
+    }
+    #our-client h1{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 35px;
+    }
+    
+    #our-client::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        background: url('https://media.istockphoto.com/photos/chicken-tikka-masala-picture-id667918412?k=20&m=667918412&s=612x612&w=0&h=tq59yvLBB_SK0zMYiI5_k6mQ0mNGREGFsKoe2U1FJFc=') no-repeat center center/cover;
+        height: 300px;
+        z-index: -1;
+        opacity: 0.4;
+    }
+    
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #clients img{
+        height: 150px;
+    }
+    
+    .client-item{
+        padding: 30px;
+    }
+    
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        justify-content: center;
+        align-items: center;
+        height: 320px;
+    }
+    
+    #home::before{
+        content: "";
+        background: url('https://img.freepik.com/free-photo/top-view-circular-food-frame_23-2148723455.jpg?w=2000') no-repeat center center/cover;
+        position: absolute;
+        height: 61%;
+        width: 100%;
+        z-index: -1;   
+    }
+    
+    #home h1{
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        padding: 10px;
+        font-size: 35px;
+    }
+    
+    #home p{
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 4px;
+    }
+    
+    /* classes */
+    .h-primary{
+        font-size: 2.4rem;
+        padding: 12px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .h-secondary{
+        font-size: 1.7rem;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 12px;
+    }
+    
+    .Button{
+        padding: 6px 18px;
+        border: 2px solid black;
+        background-color: rgb(48, 155, 139);
+        color: white;
+        margin: 15px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .Button:hover{
+        background-color: rgb(172, 27, 27);
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    #contactbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+    
+    #contactbox input{
+        border-radius: 5px;
+        width: 490px;
+        height: 25px;
+        border: 2px solid black;
+    }
+    
+    #contactbox textarea{
+         width: 100%;
+         padding: 0.5rem;
+         border-radius: 10px;
+         border: 2px solid black;
+    }
+    
+    #contactbox form{
+        width: 40%;
+    }
+    
+    #contactbox label{
+        font-size: 1.2rem;
+    }
+    
+    #contactbox #btn{
+        padding: 8px;
+        width: 100px;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: rgb(112, 119, 117);
+    }
+    
+    #contactbox #btn:hover{
+        background-color: rgb(102, 157, 157);
+    }
+    
+    /* footer */
+    footer{
+        padding: 9px 20px;
+        background: rgb(35, 33, 33);
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://pps.whatsapp.net/v/t61.24694-24/292493553_413012397453395_5189034673230612264_n.jpg?ccb=11-4&oh=01_AVxnfJvu3DTslEq89Vjk11surp0nCPFUoDlO6uK1Om2pBg&oe=62DA30E8" width="60px" alt="logo">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+        <div id="divide">
+           <input id="search" type="text" placeholder="Search">
+            <button id="searchbutton">Search</button>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to myfoodfactory services</h1>
+        <p>Welcome to myfoodfactory services, In this restaurant there are some delicious and exotic food which flavours and textures will blow your mind.</p>
+        <p>Here we are presenting the new dishes and new menu in which you can have thousand of delicous items. It is the experience which you will never felt before.</p>
+        <button class="Button">Order Now</button>
+    </section>
+
+    <section class="services-container">
+       <h1 class="h-primary center">Our Services</h1>
+       <div id="services">
+        <div class="box">
+            <img src="https://static.toiimg.com/photo/msid-87930581/87930581.jpg?211826" alt="pizza">
+            <h2 class="h-secondary center">Starters</h2>
+            <p class="center">we have lot of varities in starters. Here you can have most delicious items in which some will be your favourite. Click on the icon and check now.</p>
+        </div>
+        <div class="box">
+            <img src="https://previews.123rf.com/images/baibakova/baibakova1908/baibakova190800142/129010608-assorted-indian-food-on-black-background-indian-cuisine-.jpg" alt="appetizers">
+            <h2 class="h-secondary center">Main course</h2>
+            <p class="center">we have lot of varietiy in the main course as well. Here you can have the most delicious and exotic food main course. You can click here and check now. 
+            </p>
+        </div>
+        <div class="box">
+            <img src="https://static.toiimg.com/photo/msid-81923053/81923053.jpg" alt="dosa image">
+            <h2 class="h-secondary center">Food Delivery</h2>
+            <p class="center">Delivery service is also available at your door step. From this restaurant you can order different types of items and different types of exotic food.
+            </p>
+        </div>
+       </div>
+    </section>
+
+    <section id="our-client">
+      <h1 class="h-ternary center">Our Clients</h1>
+      <div id="clients">
+       <div class="client-item">
+        <img src="https://download.logo.wine/logo/Coca-Cola/Coca-Cola-Logo.wine.png" alt="cocacola">
+       </div> 
+       <div class="client-item">
+        <img src="https://1000logos.net/wp-content/uploads/2017/08/Domino%E2%80%99s-Logo.png" alt="dominoslogo">
+       </div> 
+       <div class="client-item">
+        <img src="https://seeklogo.com/images/F/food-logo-59E5A73AFD-seeklogo.com.png" alt="hp">
+       </div> 
+       <div class="client-item">
+        <img src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png" alt="apple">
+       </div> 
+      </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contactbox">
+            <form action="">
+                <div class="formgroup">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="formgroup">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="formgroup">
+                    <label for="phonenumber">Phone Number</label><br>
+                    <input type="phone" name="name" id="phonenumber" placeholder="Enter your phone number">
+                </div>
+                <div class="formgroup">
+                    <label for="message">Message</label><br>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <button id="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy; www.myfoodfactory.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>
